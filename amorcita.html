@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mensajes especiales llenos de amor y cariño para ti." />
+  <title>Mensajes con Amor 💚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Para ti, <span>con todo mi amor</span> <span class="beating-heart">💚</span></h1>
+    <div class="header-divider">✦</div>
+    <p>Haz clic en un sobre para abrirlo</p>
+  </header>
+
+  <main class="cards-grid">
+
+    <!-- Card 1: Te quiero bichita -->
+    <article class="envelope-card" id="card-love" role="button" tabindex="0" aria-label="Abrir sobre: Te quiero bichita verde">
+
+      <!-- ESTADO CERRADO -->
+      <div class="envelope-closed">
+        <div class="closed-icon">✉️</div>
+        <span class="closed-hint">Toca para abrir 💚</span>
+      </div>
+
+      <!-- ESTADO ABIERTO -->
+      <div class="envelope-open">
+        <div class="envelope-flap-open"></div>
+        <div class="envelope-body-open">
+          <div class="envelope-seal">💚</div>
+          <p class="envelope-message">
+            Te quiero bichita verde <span class="beating-heart">💚</span>
+          </p>
+          <div class="envelope-footer">
+            <span>✦</span> Con todo el corazón <span>✦</span>
+          </div>
+          <p class="close-hint">Toca para cerrar ✕</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Card 2: Pensando en tí -->
+    <article class="envelope-card" id="card-thinking" role="button" tabindex="0" aria-label="Abrir sobre: Estoy pensando en tí">
+
+      <!-- ESTADO CERRADO -->
+      <div class="envelope-closed">
+        <div class="closed-icon"><span class="thinking-icon">✉️</span></div>
+        <span class="closed-hint">Toca para abrir 💭</span>
+      </div>
+
+      <!-- ESTADO ABIERTO -->
+      <div class="envelope-open">
+        <div class="envelope-flap-open"></div>
+        <div class="envelope-body-open">
+          <div class="envelope-seal"><span class="thinking-icon">💭</span></div>
+          <p class="envelope-message">
+            Estoy pensando en tí <span class="thinking-icon">💭</span>
+          </p>
+          <div class="envelope-footer">
+            <span>✦</span> Siempre en mi mente <span>✦</span>
+          </div>
+          <p class="close-hint">Toca para cerrar ✕</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Card 3: Cupón -->
+    <article class="envelope-card coupon-card" id="card-coupon" role="button" tabindex="0" aria-label="Abrir sobre: Cupón especial">
+
+      <!-- ESTADO CERRADO -->
+      <div class="envelope-closed">
+        <div class="closed-icon"><span class="twinkle-icon">✉️</span></div>
+        <span class="closed-hint">Toca para abrir ⭐</span>
+      </div>
+
+      <!-- ESTADO ABIERTO -->
+      <div class="envelope-open">
+        <div class="envelope-flap-open"></div>
+        <div class="envelope-body-open">
+          <div class="envelope-seal"><span class="twinkle-icon">⭐</span></div>
+          <p class="envelope-message">
+            Cupón válido para cualquier deseo o antojo
+          </p>
+          <div class="coupon-notches">
+            <div class="coupon-circle"></div>
+            <div class="coupon-circle"></div>
+          </div>
+          <p class="coupon-sub">
+            Tómale foto y guárdalo para canjearlo<br/>en el momento que desees ✨
+          </p>
+          <span class="coupon-badge">🎁 &nbsp;Sin Caducidad</span>
+          <div class="envelope-footer">
+            <span>✦</span> Solo para ti <span>✦</span>
+          </div>
+          <p class="close-hint">Toca para cerrar ✕</p>
+        </div>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    Hecho con <span>💚</span> especialmente para ti &nbsp;·&nbsp; <span>💚</span>
+  </footer>
+
+  <script>
+    // Toggle envelope open/closed on click or keyboard
+    document.querySelectorAll('.envelope-card').forEach(function(card) {
+      function toggleCard() {
+        card.classList.toggle('is-open');
+      }
+
+      card.addEventListener('click', toggleCard);
+
+      // Accessibility: open/close with Enter or Space key
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCard();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
