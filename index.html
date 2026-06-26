@@ -2,448 +2,149 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Luis Enrique Jiménez - Programador Senior de Backend especializado en PHP. Descubre cómo utilizo la Inteligencia Artificial (Antigravity) para mejorar y optimizar mi código.">
-  <meta name="author" content="Luis Enrique Jiménez">
-  <title>Luis Enrique Jiménez | Senior PHP Developer & AI-Enhanced Programmer</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Acceso especial — solo para ti." />
+  <title>Acceso Especial 💚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet">
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <!-- JavaScript -->
-  <script defer src="js/main.js"></script>
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="password.css" />
 </head>
 
 <body>
-  <!-- Header / Navigation -->
-  <header id="main-header">
-    <div class="container nav-container">
-      <a href="#hero" class="logo" id="nav-logo">
-        <span class="logo-bracket">&lt;</span>LE<span class="logo-bracket">/&gt;</span>
-      </a>
-      <nav id="navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link active" id="link-hero">Inicio</a></li>
-          <li><a href="#about" class="nav-link" id="link-about">Sobre Mí</a></li>
-          <li><a href="#skills" class="nav-link" id="link-skills">Habilidades</a></li>
-          <li><a href="#projects" class="nav-link" id="link-projects">Proyectos</a></li>
-          <li><a href="#contact" class="nav-link" id="link-contact">Contacto</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación">
-        <span class="hamburger"></span>
-      </button>
+
+  <!-- Partículas decorativas -->
+  <div class="particles" aria-hidden="true">
+    <span>💚</span><span>💚</span><span>💚</span>
+    <span>💚</span><span>💚</span><span>💚</span>
+    <span>💚</span><span>💚</span><span>💚</span>
+  </div>
+
+  <main class="login-wrapper">
+
+    <div class="login-card" id="login-card">
+
+      <!-- Ícono de candado animado -->
+      <div class="lock-icon" id="lock-icon" aria-hidden="true">🔒</div>
+
+      <h1 class="login-title">Acceso Especial</h1>
+      <p class="login-subtitle">Solo para alguien muy especial 💚</p>
+
+      <form class="login-form" id="login-form" autocomplete="off" novalidate>
+
+        <label class="form-label" for="secret-input">
+          Objeto con el que te pegué sin intención el otro día:
+        </label>
+
+        <div class="input-wrapper">
+          <input type="text" id="secret-input" class="form-input" placeholder="Escribe aquí…"
+            aria-describedby="error-msg" autofocus />
+          <span class="input-icon">🔑</span>
+        </div>
+
+        <p class="error-msg" id="error-msg" role="alert" aria-live="polite"></p>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="btn-text">Abrir 💚</span>
+          <span class="btn-loader" aria-hidden="true"></span>
+        </button>
+
+      </form>
+
     </div>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="badge" id="hero-badge">PHP &amp; AI Integration</div>
-          <h1 id="hero-name">Luis Enrique Jiménez</h1>
-          <h2 id="hero-title">Senior Backend Developer</h2>
-          <p id="hero-intro" class="lead-text">
-            Más de 10 años de experiencia diseñando y construyendo arquitecturas backend robustas en PHP. Actualmente,
-            liderando la adopción de Inteligencia Artificial con herramientas avanzadas como
-            <strong>Antigravity</strong> para llevar la optimización de código, patrones de diseño y testing a un nivel
-            superior.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary" id="btn-view-work">Ver Proyectos</a>
-            <a href="#contact" class="btn btn-secondary" id="btn-go-contact">Contacto</a>
-          </div>
-        </div>
-
-        <!-- Interactive Terminal Simulator -->
-        <div class="hero-visual">
-          <div class="terminal-window" id="php-terminal">
-            <div class="terminal-header">
-              <div class="terminal-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <span class="terminal-title">antigravity_optimizer.php</span>
-              <div class="terminal-spacer"></div>
-            </div>
-
-            <div class="terminal-tabs">
-              <button class="terminal-tab active" id="tab-legacy">Legacy Code</button>
-              <button class="terminal-tab" id="tab-optimized" disabled>AI Optimized</button>
-            </div>
-
-            <div class="terminal-body">
-              <pre><code id="terminal-code" class="language-php">// Cargando código PHP heredado...</code></pre>
-            </div>
-
-            <div class="terminal-footer">
-              <div class="terminal-status" id="terminal-status-text">
-                <span class="status-indicator yellow" id="status-light"></span>
-                <span id="status-message">Código sin optimizar detectado.</span>
-              </div>
-              <button class="btn btn-terminal" id="btn-improve-code">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
-                </svg>
-                Optimizar con Antigravity
-              </button>
-            </div>
-          </div>
-        </div>
+    <!-- Pantalla de éxito (oculta al inicio) -->
+    <div class="success-screen" id="success-screen" aria-hidden="true">
+      <div class="success-icon">💚</div>
+      <h2 class="success-title">¡Correcto, bichita! 🎉</h2>
+      <p class="success-sub">Abriendo tus mensajes…</p>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
       </div>
-    </section>
+    </div>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <div class="container about-container">
-        <div class="about-image-wrapper">
-          <img src="src/avatar.png" alt="Ilustración de Luis Enrique Jiménez en su área de trabajo" class="about-image"
-            id="img-avatar">
-          <div class="image-backdrop"></div>
-        </div>
-        <div class="about-content">
-          <h2 id="about-heading" class="section-title">Sobre Mí</h2>
-          <p class="section-subtitle">Construyendo soluciones eficientes y escalables</p>
-          <div class="about-text">
-            <p>
-              Con más de una década en el área de tecnologías de la información, he visto evolucionar el ecosistema web.
-              Mi especialidad se centra en crear soluciones de backend seguras, de alto rendimiento y fáciles de
-              mantener, donde **PHP** ha sido mi principal aliado tecnológico.
-            </p>
-            <p>
-              Hoy en día, considero que el desarrollo moderno no solo se trata de escribir código manualmente, sino de
-              saber amplificar el ingenio humano con Inteligencia Artificial. Al incorporar a
-              <strong>Antigravity</strong> en mi flujo diario, he perfeccionado mis estándares: automatizando la
-              refactorización compleja, aplicando tipado estricto e implementando patrones de diseño sofisticados con
-              mayor velocidad y precisión.
-            </p>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card" id="stat-years">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Años de Experiencia</span>
-            </div>
-            <div class="stat-card" id="stat-projects">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Proyectos Completados</span>
-            </div>
-            <div class="stat-card" id="stat-ai">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Flujo Mejorado con IA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <h2 id="skills-heading" class="section-title text-center">Mi Stack Tecnológico</h2>
-        <p class="section-subtitle text-center">Herramientas y tecnologías que domino para dar vida a tus ideas</p>
-
-        <div class="skills-grid">
-          <!-- Backend -->
-          <div class="skills-category-card" id="skill-cat-backend">
-            <div class="category-header">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                <line x1="6" y1="6" x2="6.01" y2="6" />
-                <line x1="6" y1="18" x2="6.01" y2="18" />
-              </svg>
-              <h3>Core Backend</h3>
-            </div>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">PHP (POO, MVC)</span>
-                  <span class="skill-percent">95%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 95%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Laravel / Symfony</span>
-                  <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 85%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">APIs RESTful</span>
-                  <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 90%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Databases & Tools -->
-          <div class="skills-category-card" id="skill-cat-db">
-            <div class="category-header">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
-              </svg>
-              <h3>Bases de Datos &amp; Sistemas</h3>
-            </div>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">MySQL / PostgreSQL</span>
-                  <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 90%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Git &amp; GitHub Actions</span>
-                  <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 85%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Docker &amp; Servidores</span>
-                  <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 75%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- AI & Modern Engineering -->
-          <div class="skills-category-card" id="skill-cat-ai">
-            <div class="category-header">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                <line x1="12" y1="22.08" x2="12" y2="12" />
-              </svg>
-              <h3>Ingeniería con IA</h3>
-            </div>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Asistentes de IA (Antigravity)</span>
-                  <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 90%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Refactorización Automatizada</span>
-                  <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 80%"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Generación de Tests Unitarios</span>
-                  <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress" style="width: 85%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 id="projects-heading" class="section-title text-center">Proyectos Destacados</h2>
-        <p class="section-subtitle text-center">Una selección de sistemas y herramientas construidos con pasión</p>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card" id="project-mvc">
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-tag">PHP MVC</span>
-                <span class="project-tag">OOP</span>
-              </div>
-              <h3 class="project-title">Custom PHP MVC Framework</h3>
-              <p class="project-desc">
-                Un micro-framework PHP enfocado en alto rendimiento y mínima huella de memoria. Diseñado siguiendo
-                estándares modernos como PSR-4 y PSR-12, implementando enrutamiento rápido e inyección de dependencias.
-              </p>
-              <div class="project-footer">
-                <span class="project-tech">PHP 8.2 • Composer</span>
-                <a href="https://github.com/ljimeneztkio" target="_blank" rel="noopener" class="project-link"
-                  id="link-proj-mvc">
-                  Ver Código
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card" id="project-api">
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-tag">Laravel</span>
-                <span class="project-tag">REST API</span>
-              </div>
-              <h3 class="project-title">E-Commerce RESTful Engine</h3>
-              <p class="project-desc">
-                API robusta para comercio electrónico construida con Laravel. Cuenta con autenticación JWT, integración
-                de pasarelas de pago, procesamiento de pedidos en segundo plano con Redis y documentación interactiva
-                con OpenAPI.
-              </p>
-              <div class="project-footer">
-                <span class="project-tech">Laravel • MySQL • Redis</span>
-                <a href="https://github.com/ljimeneztkio" target="_blank" rel="noopener" class="project-link"
-                  id="link-proj-api">
-                  Ver Código
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card" id="project-ai">
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-tag">AI Tools</span>
-                <span class="project-tag">OpenAI</span>
-              </div>
-              <h3 class="project-title">PHP AI Doc &amp; Test Auto-Generator</h3>
-              <p class="project-desc">
-                Herramienta de consola escrita en PHP que analiza archivos fuente y utiliza modelos de IA para generar
-                de manera automática documentación PHPDoc estandarizada y tests unitarios de PHPUnit.
-              </p>
-              <div class="project-footer">
-                <span class="project-tech">PHP • OpenAI API • PHPUnit</span>
-                <a href="https://github.com/ljimeneztkio" target="_blank" rel="noopener" class="project-link"
-                  id="link-proj-ai">
-                  Ver Código
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container contact-container">
-        <h2 id="contact-heading" class="section-title text-center">¿Trabajamos Juntos?</h2>
-        <p class="section-subtitle text-center">Hablemos sobre tu próximo proyecto backend o integraciones de IA</p>
-
-        <div class="contact-card">
-          <div class="contact-info-block">
-            <h3>Luis Enrique Jiménez</h3>
-            <p class="contact-desc">Desarrollador Backend PHP &amp; Integrador de IA</p>
-            <div class="contact-divider"></div>
-            <p class="contact-quote">"El buen código no solo funciona; debe ser seguro, escalable y comprensible para el
-              equipo."</p>
-          </div>
-
-          <div class="contact-links-block">
-            <a href="mailto:luisejt@example.com" class="contact-btn" id="contact-email">
-              <div class="icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span>Escríbeme por Correo</span>
-                <strong>luisejt@gmail.com</strong>
-              </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/luisejt/" target="_blank" rel="noopener" class="contact-btn"
-              id="contact-linkedin">
-              <div class="icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span>Conectemos en LinkedIn</span>
-                <strong>linkedin.com/in/luisejt</strong>
-              </div>
-            </a>
-
-            <a href="https://github.com/ljimeneztkio" target="_blank" rel="noopener" class="contact-btn"
-              id="contact-github">
-              <div class="icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span>Mi Repositorio Personal</span>
-                <strong>github.com/ljimeneztkio</strong>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Footer -->
-  <footer id="main-footer">
-    <div class="container footer-container">
-      <p>&copy; 2026 Luis Enrique Jiménez. Hecho a mano y mejorado con Inteligencia Artificial utilizando Antigravity.
-      </p>
-    </div>
-  </footer>
+  <script>
+    const SECRET = 'ramita';
+
+    const form = document.getElementById('login-form');
+    const input = document.getElementById('secret-input');
+    const errorMsg = document.getElementById('error-msg');
+    const lockIcon = document.getElementById('lock-icon');
+    const loginCard = document.getElementById('login-card');
+    const successSc = document.getElementById('success-screen');
+    const progressBar = document.getElementById('progress-bar');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const value = input.value.trim().toLowerCase();
+
+      if (value === SECRET) {
+        // Limpiar error
+        errorMsg.textContent = '';
+        input.classList.remove('input-error');
+
+        // Animación de unlock
+        lockIcon.textContent = '🔓';
+        lockIcon.classList.add('unlocked');
+
+        // Fade out card → fade in success
+        setTimeout(function () {
+          loginCard.classList.add('card-fade-out');
+        }, 300);
+
+        setTimeout(function () {
+          loginCard.style.display = 'none';
+          successSc.style.display = 'flex';
+          successSc.setAttribute('aria-hidden', 'false');
+          successSc.classList.add('success-visible');
+
+          // Animación barra de progreso → redirect
+          progressBar.style.width = '100%';
+        }, 900);
+
+        setTimeout(function () {
+          window.location.href = 'amorcita.html';
+        }, 2400);
+
+      } else {
+        // Contraseña incorrecta
+        input.classList.add('input-error');
+        input.value = '';
+
+        errorMsg.textContent = '¡Eso no es! Piénsalo bien… 💭';
+
+        // Efecto shake en la tarjeta
+        loginCard.classList.remove('shake');
+        void loginCard.offsetWidth; // reflow para reiniciar animación
+        loginCard.classList.add('shake');
+
+        // Ícono de candado sacude
+        lockIcon.textContent = '🔒';
+        lockIcon.classList.remove('unlocked');
+
+        // Quitar el error después de un momento
+        setTimeout(function () {
+          input.classList.remove('input-error');
+          errorMsg.textContent = '';
+        }, 2500);
+      }
+    });
+
+    // Limpiar error al escribir
+    input.addEventListener('input', function () {
+      if (input.classList.contains('input-error')) {
+        input.classList.remove('input-error');
+        errorMsg.textContent = '';
+      }
+    });
+  </script>
+
 </body>
 
 </html>
